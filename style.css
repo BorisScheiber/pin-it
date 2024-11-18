@@ -1,0 +1,372 @@
+body {
+  margin: 0;
+  background-color: #fffcf1;
+  font-family: "Roboto";
+}
+
+.header {
+  height: 300px;
+  background-image: url(./img/Pinit.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+}
+
+.create_note {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.title {
+  display: inline-flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+  background: white;
+  border-radius: 12px 12px 0px 0px;
+}
+
+.trash_title {
+  display: inline-flex;
+  justify-content: flex-start;
+  width: 100%;
+  align-items: center;
+  background: white;
+  border-radius: 12px 12px 0px 0px;
+}
+
+.title_input {
+  border-style: none;
+  font-size: 24px;
+  padding: 15px 10px 5px 10px;
+  border: none;
+  font-weight: bold;
+  color: #112a2f;
+  cursor: auto;
+  width: 70%;
+}
+
+.trash_title_input {
+  border-style: none;
+  font-size: 24px;
+  padding: 15px 10px 5px 10px;
+  border: none;
+  font-weight: bold;
+  color: #112a2f;
+  cursor: auto;
+  width: 100%;
+}
+
+.content_title_input {
+  border-style: none;
+  font-size: 20px;
+  border: none;
+  font-weight: bold;
+  padding: 15px 10px 5px 10px;
+  cursor: auto;
+  width: 70%;
+}
+
+:focus-visible {
+  outline: none;
+}
+
+.clear_title {
+  cursor: pointer;
+  transition: filter 0.1s ease-in-out;
+}
+
+.clear_title:hover {
+  filter: brightness(60%);
+}
+
+.text_area {
+  width: -webkit-fill-available;
+  height: 150px;
+  border: none;
+  font-size: 16px;
+  padding: 20px 10px 0px 10px;
+  background-color: #9ebec2bb;
+  word-wrap: break-word;
+  resize: none;
+  cursor: auto;
+  font-family: "Roboto";
+}
+
+.text_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.save_button {
+  text-align: center;
+  font-size: 20px;
+  border-style: none;
+  border-radius: 0 0 12px 12px;
+  background-color: #112931bf;
+  color: #fffcf1;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  cursor: pointer;
+  transition: text-shadow 0.1s ease-in-out;
+}
+
+.edit_button {
+  font-size: 20px;
+  border-style: none;
+  border-radius: 0 0 12px 12px;
+  background-color: #112931bf;
+  color: #fffcf1;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: text-shadow 0.1s ease-in-out;
+}
+
+.restore_button {
+  font-size: 20px;
+  border-style: none;
+  border-radius: 0 0 12px 12px;
+  background-color: #112931bf;
+  color: #fffcf1;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.permanent_delete {
+  border-style: none;
+  border-radius: 0 0 12px 12px;
+  background-color: #112931;
+  padding-bottom: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.permanent_delete_buttons {
+  color: none;
+  background-color: #11293100;
+  border-style: none;
+  border-radius: 12px;
+  height: 40px;
+  width: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.permanent_delete_buttons:focus-visible {
+  outline: 1px solid #fffcf1;
+}
+
+.permanent_delete img {
+  cursor: pointer;
+  width: 24px;
+}
+
+.permanent_delete img:hover {
+  filter: drop-shadow(1px 0px 10px #fffcf178);
+}
+
+.restore_button img {
+  cursor: pointer;
+}
+
+.restore_button img:hover {
+  filter: drop-shadow(1px 0px 10px #fffcf178);
+}
+
+.delete_button:hover {
+  background-color: #384648;
+}
+
+.edit_button:hover {
+  background-color: #384648;
+  text-shadow: 0px 1px 13px #fffcf13d;
+}
+
+.save_button:hover {
+  background-color: #384648;
+  text-shadow: 0px 1px 13px #fffcf13d;
+}
+
+.note {
+  width: 350px;
+  box-shadow: 2px 2px 11px 0px #a9c0bf70;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  justify-content: space-between;
+  border: 1px solid #aac2c1;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.content_note {
+  width: 300px;
+  box-shadow: 2px 2px 11px 0px #a9c0bf70;
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  justify-content: space-between;
+  border: 1px solid #aac2c1;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.content_notes {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.contentTrash_notes {
+  display: none;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+img {
+  width: 24px;
+}
+
+.trash {
+  display: inline-flex;
+  font-size: 16px;
+  gap: 8px;
+  width: 140px;
+  height: 45px;
+  background-color: #4c5e61;
+  color: #fffcf1;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #aac2c1;
+  box-shadow: 2px 2px 8px 4px #a9c0bf20;
+  border-radius: 12px;
+  margin-left: 18px;
+  cursor: pointer;
+  transition: text-shadow 0.1s ease-in-out;
+}
+
+.trash:hover {
+  box-shadow: 2px 2px 8px 4px #a9c0bf66;
+  background-color: #384648;
+  text-shadow: 0px 1px 13px #fffcf13d;
+}
+
+.pop_up {
+  z-index: 900;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #384648e9;
+}
+
+.pop_up_box {
+  z-index: 999;
+  color: #fffcf1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 250px;
+  background-color: #112931;
+  box-shadow: 1px 1px 20px 9px rgb(255 255 255 / 12%);
+  border: 1px solid #aac2c1d3;
+  border-radius: 12px;
+  overflow: hidden;
+  word-wrap: break-word;
+  font-size: 20px;
+  margin: 16px;
+}
+
+h3 {
+  margin: 30px;
+  text-align: center;
+}
+
+.notes {
+  object-fit: contain;
+  background-color: #aac2c1;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 2px 2px 8px 4px #d3d3d3d1;
+  border-radius: 12px;
+  margin-top: 50px;
+}
+
+@media (max-width: 400px) {
+  .title_input {
+    font-size: 22px;
+  }
+
+  .trash_title_input {
+    font-size: 22px;
+  }
+
+  .note {
+    width: 280px;
+    margin-top: 15px;
+  }
+
+  .create_note {
+    margin-bottom: 15px;
+  }
+
+  .content_note {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 250px;
+  }
+
+  .trash {
+    height: 40px;
+    margin-bottom: 15px;
+  }
+
+  .save_button {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .edit_button {
+    font-size: 18px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  img {
+    width: 20px;
+  }
+
+  .save_button {
+    font-size: 18px;
+  }
+
+  .pop_up_box {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notizen | Pin it</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="./img/favicon.webp">
+
+</head>
+
+<body onload="init()">
+
+    <header class="header"></header>
+
+    <button class="trash" id="trashButton" onclick="trash()">Papierkorb<img class="trash_img"
+            src="./img/trash-can-solid.svg"></button>
+    <button class="trash" id="backButton" onclick="backHome()" style="display: none;">Zurück<img class="trash_img"
+            src="./img/circle-left-solid.svg"></button>
+
+
+    <div class="create_note" id="createNote">
+        <div class="note">
+            <div class="title">
+                <input id="title" class="title_input" placeholder="Titel">
+                <img onclick="cleanNote()" class="clear_title" src="./img/xmark-solid.svg">
+            </div>
+            <div class="text_container">
+                <textarea id="note" class="text_area" placeholder="Notiz schreiben...." maxlength="300"></textarea>
+                <button onclick="addNote()" class="save_button">Speichern</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="contentNotes" class="content_notes"></div>
+
+
+    <div id="contentTrash" class="contentTrash_notes"></div>
+
+    <div id="popUp" class="pop_up">
+
+    </div>
+
+
+</body>
+
+</html>
